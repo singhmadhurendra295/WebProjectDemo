@@ -1,10 +1,13 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title>My First web project</title>
+	 <meta charset="utf-8" />
+    <title>AngularJS User Registration and Login Example</title>
+    
+    
 </head>
-<body>
-<div ng-app="mainApp">
+<body  ng-app="app" >
+<div class="container">
 <!-- ng-view directive to tell AngularJS where to inject content pages -->
         <ng-view></ng-view>
 </div>
@@ -12,5 +15,7 @@
 <script type="text/javascript" src="js/libs/angular/angular.min.js"></script>
 <script type="text/javascript" src="js/libs/angular-route/angular-route.min.js"></script>
 <script type="text/javascript" src="js/libs/angular-resource/angular-resource.min.js"></script>
+<script src="controller/loginController.js"></script>
+<script src="controller/registerController.js"></script>
 </body>/
 </html>

@@ -1,18 +1,29 @@
 //Define an angular module for our app
-var app = angular.module('mainApp', []);
+(function () {
+    'use strict';
+
+var app = angular.module('app', ['ngRoute']);
 //Define Routing for the application
 app.config(['$routeProvider',
     function($routeProvider) {
         $routeProvider.
-            when('/Customers/AddNewCustomer', {
-                templateUrl: 'Customers/AddNewCustomer.html',
-                controller: 'AddNewCustomerController'
-            }).
-            when('/Customers/CustomerInquiry', {
-                templateUrl: 'Customers/CustomerInquiry.html',
-                controller: 'CustomerInquiryController'
-            }).
-            otherwise({
-                redirectTo: '/Customers/AddNewCustomer'
-            });
-}]);
+        when('/', {
+            templateUrl: 'templates/login.html',
+            controller: 'loginController'
+        }).
+        when('/login', {
+            templateUrl: 'templates/login.html',
+            controller: 'loginController'
+        }).
+        when('/register', {
+            templateUrl: 'templates/registration.html',
+            controller: 'registrationController'
+
+        }).
+        otherwise({
+            redirectTo: '/index'
+        });
+    }
+]);
+
+})();

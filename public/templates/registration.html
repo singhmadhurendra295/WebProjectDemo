@@ -1,20 +1,10 @@
-<!DOCTYPE html>
-<html>
-<head>
-	<title>Registration</title>
-</head>
-<body>
-<div ng-controller="registration">
-	
-	<div id="register">
+<div id="register" ng-controller="registration">
 		
 		<label>Username</label><input type="text" ng-model="username"/>
 		<label>Password</label><input type="password" ng-model="password"/>
 		<label>Email</label><input type="email" ng-model="email">
-		<input type ="Submit" name="Register" href="" ng-click="submit()"></input>
+		<input type ="Submit" value="Register" href="#options" ng-click="submit()"></input>
+        <a href="#/login">Login</a>
+        </div>
 
-	</div>
 
-</div>
-</body>
-</html>
